@@ -1,0 +1,245 @@
+:root {
+  --primary-color: #669ccb;
+  --primary-color-dark: #5681a7;
+  --secondary-color: #e8f1fa;
+  --text-dark: #282d31;
+  --text-light: #767268;
+  --extra-light: #f3f4f6;
+
+  --max-width: 1200px;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.sc {
+  padding: 5rem 1rem;
+  max-width: var(--max-width);
+  margin: auto;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+nav {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 2rem 1rem;
+  width: 100%;
+  max-width: var(--max-width);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nl a {
+  text-decoration: none;
+  color: var(--extra-light);
+  font-size: 1.5rem;
+}
+.nls {
+  display: none;
+  list-style: none;
+  align-items: center;
+  gap: 2rem;
+}
+.l {
+  color: var(--extra-light);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.l:hover {
+  color: var(--primary-color);
+}
+header {
+  height: 100vh;
+  background-image: linear-gradient(
+    rgba(45, 92, 132, 0.5),
+    rgba(45, 92, 132, 0.5)
+  ),
+    url("assets/bg1.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header .sc {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+.hc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  color: var(--extra-light);
+}
+.hc p {
+  text-align: center;
+}
+.hc button {
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: var(--extra-light);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.hc button:hover {
+  background-color: var(--primary-color-dark);
+}
+.bc {
+  background-image: linear-gradient(
+      rgba(35, 71, 103, 0.5),
+      rgba(35, 71, 103, 0.5)
+    ),
+    url("assets/bg2.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bc .sc {
+  padding: 10rem 1rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.bc {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+  color: var(--extra-light);
+}
+.bco h2 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+.bco p{
+  text-align:right;
+}
+.bco button {
+  padding: 0.5rem 2rem;
+  outline: none;
+  border: 2px solid var(--secondary-color);
+  background-color: transparent;
+  color: var(--secondary-color);
+  font-size: 1rem;
+  cursor: pointer;
+}
+@media (min-width: 640px) {
+  .nls {
+    display: flex;
+  }
+
+  header .sc {
+    justify-content: flex-start;
+  }
+
+  .hc {
+    max-width: 400px;
+    align-items: flex-start;
+  }
+
+  .hc p {
+    text-align: left;
+  }
+}
+@media (min-width: 786px) {
+  .bc .sc {
+    justify-content: flex-end;
+  }
+
+  .bco {
+    align-items: flex-end;
+    text-align: right;
+    max-width: 800px;
+  }
+}
+footer{
+  background-color: #111;
+}
+.footerContainer{
+  width: 100%;
+  padding: 70px 30px 20px ;
+}
+.socialIcons{
+  display: flex;
+  justify-content: center;
+}
+.socialIcons a{
+  text-decoration: none;
+  padding:  10px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 50%;
+}
+.socialIcons a i{
+  font-size: 2em;
+  color: black;
+  opacity: 0,9;
+}
+.socialIcons a:hover{
+  background-color: #111;
+  transition: 0.5s;
+}
+.socialIcons a:hover i{
+  color: white;
+  transition: 0.5s;
+}
+.footerNav{
+  margin: 30px 0;
+}
+.footerNav ul{
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+.footerNav ul li a{
+  color:white;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 1.3em;
+  opacity: 0.7;
+  transition: 0.5s;
+
+}
+.footerNav ul li a:hover{
+  opacity: 1;
+}
+.footerBottom{
+  background-color: #000;
+  padding: 20px;
+  text-align: center;
+}
+.footerBottom p{
+  color: white;
+}
+.designer{
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 0px 5px;
+}
+@media (max-width: 700px){
+  .footerNav ul{
+      flex-direction: column;
+  } 
+  .footerNav ul li{
+      width:100%;
+      text-align: center;
+      margin: 10px;
+  }
+  .socialIcons a{
+      padding: 8px;
+      margin: 4px;
+  }
+}
